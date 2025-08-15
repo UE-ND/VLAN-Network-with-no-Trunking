@@ -1,0 +1,19 @@
+enable
+conf t
+hostname SW1
+int range g0/1,f0/2,f0/3
+switchport mode access
+switchport access vlan 10
+int range f0/4,f0/5,g0/2
+switchport mode access
+switchport access vlan 20
+int range f0/1,/f0/6,f0/7
+switchport mode access
+switchport access vlan 30
+do show vlan brief
+vlan 10
+name ENGINEERING
+vlan 20
+name HR
+vlan 30
+name SALES

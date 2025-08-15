@@ -1,0 +1,13 @@
+enable
+conf t
+hostname R1
+int g0/0
+ip address 10.0.0.62 255.255.255.192
+no shutdown
+int g0/1
+ip address 10.0.0.126 255.255.255.192
+no shutdown
+int g0/2
+ip address 10.0.0.190 255.255.255.192
+no shutdown
+do show ip interface brief
